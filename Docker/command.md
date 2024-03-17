@@ -57,3 +57,13 @@ ps는 process status를 줄인 것
 ```
 > docker ps -a
 ```
+---
+</br>
+
+## 컨테이너 실행
+
+```
+> docker run -it centos:latest bash
+```
+docker run -it <이미지이름:태그> <명령어> 로 컨테이너 실행
+이때 SSH를 통해 서버에 접속한 것이 아니라, 호스트OS와 격리된 환경에서 bash 프로그램을 실행한 것
