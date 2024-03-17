@@ -60,7 +60,7 @@ ps는 process status를 줄인 것
 ---
 </br>
 
-## 컨테이너 실행
+# 컨테이너 실행
 
 ```
 > docker run -it centos:latest bash
