@@ -3,7 +3,7 @@
 ### 이미지 검색하고 pull 받기
 
 ```bash
-$ docker search [이미지 이름]
+> docker search [이미지 이름]
 ```
 
 해당 이미지를 docker hub라는 사이트에서 검색한 결과들을 보여줌
