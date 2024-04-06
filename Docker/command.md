@@ -2,7 +2,7 @@
 
 ### 이미지 검색하고 pull 받기
 
-```
+```bash
 > docker search [이미지 이름]
 ```
 
@@ -12,7 +12,7 @@
 
 ### 이미지 다운로드
 
-```
+```bash
 > docker pull nginx
 
 // docker pull nginx:latest
@@ -21,7 +21,7 @@
 
 pull 명령어를 이용해 다운로드
 
-```
+```bash
 > docker images
 ```
 
@@ -31,7 +31,7 @@ pull 명령어를 이용해 다운로드
 
 ### 컨테이너 만들기
 
-```
+```bash
 > docker run -d --name testserver -p 80:8080 nginx:1.21.1
 
 // docker run -d --name [컨테이너 이름] -p [호스트 포트넘버]:[컨테이너 포트넘버] [이미지 이름]
@@ -46,7 +46,7 @@ pull 명령어를 이용해 다운로드
 
 ### ⭐️ 실행중인 모든 컨테이너 확인하기
 
-```
+```bash
 > docker ps
 ```
 
@@ -54,7 +54,7 @@ ps는 process status를 줄인 것
 
 ### 모든 컨테이너 확인하기
 
-```
+```bash
 > docker ps -a
 ```
 
@@ -62,7 +62,7 @@ ps는 process status를 줄인 것
 
 # 컨테이너를 생성 후 실행 (run)
 
-```
+```bash
 > docker run -it centos:latest bash
 ```
 docker run -it <이미지이름:태그> <명령어> 로 컨테이너 실행</br>
@@ -79,13 +79,13 @@ docker run -it <이미지이름:태그> <명령어> 로 컨테이너 실행</br>
 
 # 실행 중인 컨테이너에 추가 명령어 실행 (exec)
 
-```
+```bash
 > docker exec -it [컨테이너 이름 or ID] /bin/bash
 ```
 
 </br>
 
 # 실행 중이지 않은 컨테이너 실행 (start)
-```
+```bash
 > docker start [컨테이너 이름 or ID] /bin/bash
 ```
