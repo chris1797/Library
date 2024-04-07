@@ -64,3 +64,28 @@ mv /home/user/test.txt /home/var/new.txt
 - **-b** : (backup) 대상 파일이나 디렉토리가 존재할 경우 백업 파일을 만들고 덮어쓰기
 - **-u** : (update) 대상 파일이나 디렉토리가 존재할 경우 최신 파일로 덮어쓰기
 - **-v** : (verbose) 파일이나 디렉토리를 이동할 때 이동되는 대상의 정보를 출력
+
+---
+
+## cp (Copy)
+
+- 파일이나 디렉토리를 복사하는 명령어
+
+```bash
+cp [옵션] [복사할 파일 or 디렉토리] [복사할 경로]
+
+# 현재 디렉토리에 있는 파일을 디렉토리 내부의 folder 디렉토리로 복사
+cp file.txt folderName
+
+# 현재 디렉토리에 있는 test.txt 파일을 new_test.txt라는 파일로 복사
+cp test.txt new_test.txt
+
+# /home/user 경로의 test.txt 파일을 /home/var 디렉토리로 복사
+cp /home/user/test.txt /home/var
+```
+
+### 주요 옵션
+- **-f** : (force) 복사 대상 파일이 이미 존재할 경우 덮어쓰기
+- **-n** : (no-clobber) 대상 파일이나 디렉토리가 존재할 경우 덮어쓰지 않음
+- **-v** : (verbose) 파일이나 디렉토리를 복사할 때 복사되는 대상의 정보를 출력
+- **-p** : (preserve) 원본 파일의 속성을 그대로 복사 (소유자, 그룹, 권한, 타임스탬프 등)
