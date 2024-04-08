@@ -89,3 +89,37 @@ cp /home/user/test.txt /home/var
 - **-n** : (no-clobber) 대상 파일이나 디렉토리가 존재할 경우 덮어쓰지 않음
 - **-v** : (verbose) 파일이나 디렉토리를 복사할 때 복사되는 대상의 정보를 출력
 - **-p** : (preserve) 원본 파일의 속성을 그대로 복사 (소유자, 그룹, 권한, 타임스탬프 등)
+
+---
+
+## systemctl (System Control)
+
+- 시스템 서비스를 관리하는 명령어
+- 시스템 서비스의 시작, 중지, 재시작, 상태 확인 등을 할 수 있음
+- 시스템 서비스는 시스템 부팅 시 자동으로 시작되는 서비스를 의미
+
+```bash
+systemctl [옵션] [서비스명]
+
+# 아파치 서비스 시작
+systemctl start httpd
+
+# 아파치 서비스 중지
+systemctl stop httpd
+
+# 서비스 재시작
+systemctl restart httpd
+
+# 서비스 상태 확인
+systemctl status httpd
+
+# 부팅 시 자동으로 시작되는 서비스 설정
+systemctl enable httpd
+
+# 부팅 시 자동으로 시작되는 서비스 설정 해제
+systemctl disable httpd
+
+# 실행중인 서비스 유닛들 확인
+systemctl list-units
+
+```
