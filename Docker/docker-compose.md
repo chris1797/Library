@@ -25,3 +25,41 @@ Docker Compose에 정의되어 있는 모든 서비스 컨테이너를 한번에
 ```bash
 $ docker-compose up -d
 ```
+
+</br>
+
+## docker-compose.yml 예시
+```yml
+version: '3'
+services:
+  web:
+    image: httpd:2.4
+    volumes:
+      - ./apache2/:/usr/local/apache2/ # 설정파일 경로
+      - ../upload/:/var/www/html/upload/ #이미지경로
+      - C:\workspace\Projects\projectName\projectName_VUE\pages:/var/www/html/projectName
+      # 내 PC 경로 : 아파치 서버 내부 경로(linux)
+    ports:
+      # Listen 정의
+      - 8800:8800
+      - 8091:8091 #이미지경로
+      - 7777:7070
+      # 내 PC 포트 : 아파치 포트 
+    restart: always
+
+  mysql-local:
+    image: mysql:5.7
+    container_name: mysql-local
+    ports:
+      - 3307:3306
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 
+    command:
+      # 명령어 실행
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./cnf/my.cnf:/etc/my.cnf:ro,Z
+      - ./data/:/var/lib/mysql # -v 옵션 (다렉토리 마운트 설정)
+```
