@@ -31,9 +31,11 @@
 > scp -r testDir root@192.168.0.27:/tmp/test
 ```
 
-|r|---|   |   |   |   |
-|p|---|   |   |   |   |
-|P|---|   |   |   |   |
-|c|---|   |   |   |   |
-|v|---|   |   |   |   |
-|a|---|   |   |   |   |
+| option | description |    example    |
+|:------:|:-----------:|:-------------:|
+|    r   |             |     scp -r    |
+|    p   |             |     scp -p    |
+| P      |             | scp -P [port] |
+| c      |             | scp -c        |
+| v      |             | scp -v        |
+| a      |             | scp -a        |
