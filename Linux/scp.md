@@ -31,10 +31,11 @@
 > scp -r testDir root@192.168.0.27:/tmp/test
 ```
 
+## Options
 | option | description |    example    |
 |:------:|:-----------:|:-------------:|
-|    r   |             |     scp -r    |
-|    p   |             |     scp -p    |
+|    r   |디렉토리 내 모든 파일 or 디렉토리 복사|     scp -r    |
+|    p   |원본 권한 속성 유지 복사|     scp -p    |
 | P      |             | scp -P [port] |
 | c      |             | scp -c        |
 | v      |             | scp -v        |
