@@ -46,3 +46,17 @@ wget -c http://example.com/largefile.zip
 - --password=PASS: HTTP 서버에 접속할 비밀번호를 지정합니다.
 - -U, --user-agent=AGENT: 사용자 에이전트를 설정합니다.
 - --no-check-certificate: SSL 인증서를 검사하지 않습니다.
+
+| option | description |
+|:------:|:-----------:|:-------------:|
+| -V, --version | wget의 버전을 출력 |
+| -c, --continue | 이전에 중단된 다운로드를 이어서 진행 |
+| -P, --directory-prefix=PREFIX | 다운로드한 파일을 저장할 디렉토리를 지정 |
+| -r, --recursive | 웹사이트를 재귀적으로 다운로드 |
+| -q, --quiet | 진행 상황을 출력하지 않음 |
+| --limit-rate=RATE | 다운로드 속도를 제한 |
+| -b, --background | 백그라운드에서 실행 |
+| --user=USER | HTTP 서버에 접속할 사용자 이름을 지정 |
+| --password=PASS | HTTP 서버에 접속할 비밀번호를 지정 |
+| -U, --user-agent=AGENT | 사용자 에이전트를 설정 |
+| --no-check-certificate | SSL 인증서를 검사하지 않음 |
