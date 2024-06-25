@@ -19,8 +19,7 @@ $ docker-compose -f docker-compose.yml -f docker-compose-local.yml up
 # up ⭐️⭐️⭐️
 
 Docker Compose에 정의되어 있는 모든 서비스 컨테이너를 한번에 생성하고 실행한다. </br>
-보통 -d 옵션으로 백그라운드에서 컨테이너를 띄우는데, </br>
--d 옵션을 주지 않으면 실행했던 터미널에 컨테이너 로그가 출력되며 빠져나오는 순간 컨테이너들이 모두 정지된다.
+보통 -d 옵션으로 백그라운드에서 컨테이너를 띄우는데, -d 옵션을 주지 않으면 실행했던 터미널에 컨테이너 로그가 출력되며 빠져나오는 순간 컨테이너들이 모두 정지된다.
 
 ```bash
 $ docker-compose up -d
