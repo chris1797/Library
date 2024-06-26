@@ -1,4 +1,4 @@
-# Performance Tuning
+# Apache Server Performance Tuning
 
 ```bash
 <IfModule mpm_event_module> # 멀티 프로세싱 모듈
