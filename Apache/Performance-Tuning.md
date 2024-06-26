@@ -14,4 +14,17 @@
 
 - 유휴 스레드 : 현재 요청을 처리하지 않고 대기 중인 스레드
 - MaxRequestWorkers 계산 방법 : MaxRequestWorkers = ServerLimit * ThreadsPerChild
+
+### 기본값 (Apache 2.4, mpm_event_module)
+```bash
+StartServers: 2
+ServerLimit: 16
+MinSpareThreads: 25
+MaxSpareThreads: 75
+ThreadsPerChild: 25
+MaxRequestWorkers: 400
+MaxConnectionsPerChild: 0
+```
+
+
   
