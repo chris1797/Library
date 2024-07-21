@@ -56,7 +56,7 @@ public class Board {
 
 IDENTITY 전략은 ID가 `AUTO_INCREMENT` 로 지정된 테이블 처럼 DB에 값이 저장되고 나서야 기본 키 값을 구할 수 있을 때 사용한다.
 
-개발자가 엔티티에 직접 식별자를 할당할 경우에는 그냥 `@Id` 어노테이션만 있으면 되지만 `AUTO_INCREMENT` 처럼 식별자가 DB에서 생성해주는 경우에는 `@GeneratedValue`를 사용하고 식별자 생성 전략을 선택해줘야 한다.
+개발자가 엔티티에 직접 식별자를 할당할 경우에는 그냥 `@Id` 어노테이션만 있으면 되지만 `AUTO_INCREMENT` 처럼 식별자를 DB에서 생성해주는 경우에는 `@GeneratedValue`를 사용하고 식별자 생성 전략을 선택해줘야 한다.
 
 ### ✔︎ 주의
 
