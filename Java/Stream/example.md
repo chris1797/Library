@@ -18,6 +18,10 @@ ex) `filter()`, `map()`, `sorted()`
 3. **최종 연산(Terminal Operations)**: 최종적으로 스트림을 처리하고 결과를 반환하는 연산으로, 한 번만 호출할 수 있다. 이 연산이 호출되면 스트림이 닫히고, 더 이상 중간 연산을 추가할 수 없다.
 ex) `collect()`, `forEach()`, `reduce()`
 
+<br/>
+
+---
+
 ### 2. 중간 연산(Intermediate Operations)
 중간 연산은 스트림을 변환하거나 필터링하며, 결과적으로 새로운 스트림을 반환한다. 중요한 중간 연산은 다음과 같다:
 
@@ -72,6 +76,11 @@ limit()은 스트림에서 지정된 수만큼의 요소를 반환하는 데 사
                                         .collect(Collectors.toList());
     System.out.println(limitedNumbers); // [1, 2, 3]
     ```
+
+<br/>
+
+---
+
 ### 3. 최종 연산(Terminal Operations)
 최종 연산은 스트림의 마지막 단계로, 스트림을 처리한 후 결과를 반환한다. 스트림을 최종적으로 닫고, 더 이상 중간 연산을 적용할 수 없게 된다.
 
