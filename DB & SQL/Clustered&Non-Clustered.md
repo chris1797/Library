@@ -1,4 +1,4 @@
-# 클러스터드 인덱스(Clustered Index)와 논클러스터드 인덱스(Non-Clustered Index)
+# Clustered Index & Non-Clustered Index
 > 데이터베이스 인덱스는 데이터 검색 성능을 향상시키기 위해 사용되며, 크게 클러스터드 인덱스와 논클러스터드 인덱스로 나뉜다.
 > 이 두 가지 인덱스의 차이는 데이터가 물리적으로 저장되는 방식과 데이터 접근 성능에 영향을 미친다.
 
