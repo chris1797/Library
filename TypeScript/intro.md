@@ -4,6 +4,7 @@ type과 interface는 TypeScript에서 타입을 정의하는데 사용되며, �
 
 둘 다 객체 타입을 정의할 때 사용하며, 대부분의 경우 서로 교환 가능하다.
 
+₩₩₩
 // 객체 타입 정의
 type PersonType = {
   name: string;
@@ -14,6 +15,7 @@ interface PersonInterface {
   name: string;
   age: number;
 }
+₩₩₩
 
 2. type과 interface의 차이점
 
