@@ -16,12 +16,14 @@ interface PersonInterface {
 }
 ```
 
+</br>
+
 # 2. type과 interface의 차이점
 
 ### A. 확장(Extend) 및 결합
 
-• interface: 상속(extends)을 통해 확장 가능.
-• type: 교차 타입(&)을 사용해 결합 가능.
+- interface: 상속(extends)을 통해 확장 가능.
+- type: 교차 타입(&)을 사용해 결합 가능.
 
 ```
 // interface 상속
@@ -64,12 +66,14 @@ interface User {
 ```
 type은 동일 이름으로 선언 시 오류가 발생한다.
 
+</br>
+
 # 3. 사용 가이드
 
 ### interface를 사용하는 경우
-• 객체의 구조를 정의할 때 기본적으로 interface를 사용.
-• 확장 가능성이 중요할 때 사용.
-• 라이브러리와의 호환성(예: React의 props)을 고려할 때.
+- 객체의 구조를 정의할 때 기본적으로 interface를 사용
+- 확장 가능성이 중요할 때 사용
+- 라이브러리와의 호환성(예: React의 props)을 고려할 때
 ```
 interface Person {
   name: string;
@@ -77,11 +81,10 @@ interface Person {
 }
 ```
 
-type을 사용하는 경우
-
-• 유니온 타입이나 기본 타입 조합이 필요할 때.
-• 복잡한 타입 조합이 필요한 경우.
-• 튜플, 함수 시그니처 정의 시.
+### type을 사용하는 경우
+• 유니온 타입이나 기본 타입 조합이 필요할 때
+• 복잡한 타입 조합이 필요한 경우
+• 튜플, 함수 시그니처 정의 시
 ```
 type ID = string | number;
 
@@ -89,8 +92,9 @@ type Position = [number, number];
 
 type Callback = (input: string) => void;
 ```
+</br>
 
-# 4. 실무적인 권장 사항
+# 4. 실무 권장 사항
 
 1. 객체 타입 정의는 interface를 기본으로 사용
 	- 선언 병합과 확장성을 활용 가능.
@@ -101,9 +105,11 @@ type Callback = (input: string) => void;
 
 3. 복잡한 타입 정의가 필요한 경우 type으로 시작하되, 필요 시 interface로 전환.
 
+</br>
+
 # 5. 예제 코드
+### 인터페이스로 객체 정의
 ```
-// 인터페이스로 객체 정의
 interface Car {
   make: string;
   model: string;
@@ -114,8 +120,8 @@ interface ElectricCar extends Car {
 }
 ```
 
+### 타입으로 유니온 타입 정의
 ```
-// 타입으로 유니온 타입 정의
 type FuelType = "gasoline" | "diesel" | "electric";
 
 // 타입으로 함수 정의
