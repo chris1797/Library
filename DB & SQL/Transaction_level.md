@@ -26,3 +26,14 @@ Oracle db에서는 기본으로 사용되는 레벨. `READ UNCOMMITTED` 와는 �
 > `NON-REPEATABLE READ` ?? <br/>
 > : B 트랜잭션 시작 후 name 조회 ➔ A 트랜잭션이 name 값을 업데이트 후 commit ➔ B 가 같은 트랜잭션 안에서 name을 다시 조회할 경우 값이 달라짐.
 
+<br/>
+
+REPEATABLE READ
+---
+MySQL InnoDB 스토리지 엔진에서 기본으로 사용되는 격리 수준. 위의 `NON-REPEATABLE READ` 이 발생하지 않는다. 
+
+위에서 언급했듯이 InnoDB는 롤백 가능성에 대비해 <ins>변경되기 전 레코드를 언두(Undo) 공간에 백업해두고 실제 레코드를 변경</ins>한다. 이러한 변경 방식을 `MVCC(Multi Version Concurrency Control)` 라고 하는데, `REPEATABLE READ` 에서는 이 MVCC 를 위해서 언두 영역에 백업된 이전 데이터를 이용해 동일 트랜잭션에 동일한 결과를 보여줄 수 있게 된다.
+
+사실 `READ COMMITTED` 도 MVCC 를 이용해 commit 되기 전의 데이터를 보여주는데, `REPEATABLE READ` 와의 차이는 <ins>언두 영역 백업된 레코드의 여러 버전 중에 어느 버전 이전까지 찾아 들어갈거냐의 차이다.</ins>
+
+트랜잭션들에는 고유의, 순차적인 트랜잭션 번호가 있다. `REPEATABLE READ` 에서는 내 트랜잭션이 10번이라면, 10번보다 작은 트랜잭션 번호에서 변경한 것만 보게 된다.
