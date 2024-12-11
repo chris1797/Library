@@ -39,7 +39,10 @@ benefitList.stream()
 
 Collectors.groupingBy()
 ---
-목적 : 데이터를 특정 기준으로 그룹화하고, 각 그룹의 값을 별도로 처리하거나 집계하는 용도로 사용함
+목적 : groupingBy()에서 value는 기본적으로 각 그룹에 해당하는 요소들의 List이다. 때문에 3번째 파라미터인, 예를 들어 Collectors를 사용하지 않으면 기본적으로 value는 List를 다룬다고 보면 된다. 
+이 List 데이터를 특정 기준(key)으로 그룹화하고, 필요에 따라 각 그룹의 값(List)을 별도로 처리하거나 집계하는 용도로 사용한다.
+
+
 - 데이터를 그룹화하여 Map으로 구성함
 - 기본적으로 각 key에 해당하는 값들이 List 형태로 그룹화됨, 그룹화된 List를 별도 Collector 로 추가적인 처리
 
