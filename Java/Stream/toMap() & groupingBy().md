@@ -1,4 +1,4 @@
-# toMap() 과 groupingBy()
+# Collectors의 toMap() 과 groupingBy()
 
 `Collectors.toMap()`와 `Collectors.groupingBy()`는 모두 Java Stream API에서 컬렉션 데이터를 Map으로 변환할 때 사용하는 Collector이다.
 하지만, 언제 어떤 경우에 사용해야 하는지에 대한 개념이 부족하여 정리해본다. 둘은 목적과 사용 방식에서 차이가 있다.
