@@ -6,6 +6,7 @@
 
 ```java
 List<DiaryDto> diaryList = diaryDao.fetchUserDiary(request.getUserNo());
+
 List<CalendarVO> calendarList = diaryList.parallelStream()
                 .collect(Collectors.groupingBy(diary -> diary.getDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))))
                 .entrySet().stream()
@@ -15,6 +16,7 @@ List<CalendarVO> calendarList = diaryList.parallelStream()
                 .collect(Collectors.toList());
 
 List<ChurchDiaryDto> churchDiaryList = churchDiaryService.fetchActiveChurchDiary(user.getChurchNo());
+
 List<CalendarVO> churchCalendarList = churchDiaryList.parallelStream()
                 .collect(Collectors.groupingBy(churchDiary -> churchDiary.getDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))))
                 .entrySet().stream()
@@ -22,6 +24,7 @@ List<CalendarVO> churchCalendarList = churchDiaryList.parallelStream()
                         .setDate(entry.getKey())
                         .setChurchDiary(entry.getValue()))
                 .collect(Collectors.toList());
+
 
 calendarList.addAll(churchCalendarList);
 
