@@ -18,4 +18,12 @@ public interface CommonCode {
         @Override public String getValue() { return this.label; }
     }
 }
+
+
+
+public interface EnumModel {
+    String getKey();
+    String getValue();
+}
+
 ```
