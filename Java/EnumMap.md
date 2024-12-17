@@ -27,3 +27,19 @@ public interface EnumModel {
 }
 
 ```
+<br/>
+
+Reflections 로 @Enum이 붙은 클래스들을 찾아 작업
+```java
+Reflections reflections = new Reflections(enumPath);
+Set<Class<?>> set = reflections.getTypesAnnotatedWith(Enum.class);
+StringBuilder stringBuilder = new StringBuilder();
+File filePath = "~~"
+
+for (Class<?> clazz : set) {
+    for (Class<?> innerClazz : clazz.getDeclaredClasses()) {
+        stringBuilder.append(~~~);
+    }
+}
+
+```
