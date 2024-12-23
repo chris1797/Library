@@ -1,7 +1,7 @@
 # Mock Test vs @SpringBootTest
 
-`Mock` 테스트와 `@SpringBootTest` 는 테스트 범위, 목적에 따라 사용하는 방식이 다르다. <br/>
-`Mock` 테스트는 개별적인 단위 테스트를 위한 방법이고, `@SpringBootTest` 는 애플리케이션 전체를 로드하여 통합테스트를 하기 위한 수단이다.
+Mock 테스트와 `@SpringBootTest` 는 테스트 범위, 목적에 따라 사용하는 방식이 다르다. <br/>
+Mock 테스트는 개별적인 단위 테스트를 위한 방법이고, `@SpringBootTest` 는 애플리케이션 전체를 로드하여 통합테스트를 하기 위한 수단이다.
 
 <br/>
 
@@ -99,12 +99,11 @@ public class UserServiceIntegrationTest {
 <br/>
 
 ## 언제 사용할까?
+  
 ### Mock Test
 - 특정 클래스의 로직만 테스트하고 싶을 때.
 - 외부 의존성(DB, 네트워크 등)을 분리해서 테스트하고 싶을 때.
 - 빠른 테스트
-
-<br/>
 
 ### @SpringBootTest
 - 애플리케이션의 전체 동작을 테스트.
