@@ -14,6 +14,8 @@ JPA에서 `EAGER`와 `LAZY` fetch는 엔티티의 연관 관계를 로드할 때
 ```java
 @Entity
 public class Parent {
+
+    // @OneToMany 에서는 기본값이 LAZY 이므로 fetch 옵션 생략 가능
     @OneToMany(mappedBy = "parent", fetch = FetchType.LAZY)
     private List<Child> children;
 }
