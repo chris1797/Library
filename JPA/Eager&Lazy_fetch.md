@@ -1,6 +1,6 @@
 # Eager, Lazy Fetch (즉시 로딩과 지연 로딩)
 
-JPA에서 `EAGER`와 `LAZY` fetch는 엔티티의 연관 관계를 로드할 때 데이터를 가져오는 방식(fetch strategy)을 설정하는 옵션이다. <br/>
+`EAGER`와 `LAZY` Fetch 는 엔티티의 연관 관계를 로드할 때 데이터를 가져오는 방식(fetch strategy)을 설정하는 옵션이다. <br/>
 이 전략은 연관된 엔티티 데이터를 불러오는 시점을 결정한다.
 
 <br/>
