@@ -18,33 +18,32 @@ IntStream은 Java 8의 스트림 API에서 제공하는 특화된 스트림으�
 
 ### 생성 메서드
 
-IntStream.of(int... values)	주어진 값을 스트림으로 변환.
-IntStream.range(int startInclusive, int endExclusive)	시작값에서 끝값(제외)까지 정수 스트림 생성.
-IntStream.rangeClosed(int startInclusive, int endInclusive)	시작값에서 끝값(포함)까지 정수 스트림 생성.
-Arrays.stream(int[] array)	배열을 IntStream으로 변환.
-IntStream.generate(IntSupplier)	무한 스트림 생성.
-IntStream.iterate(int seed, IntUnaryOperator)	초기값(seed)에서 시작하여 연속적으로 값을 생성.
+- IntStream.of(int... values)	주어진 값을 스트림으로 변환.
+- IntStream.range(int startInclusive, int endExclusive)	시작값에서 끝값(제외)까지 정수 스트림 생성.
+- IntStream.rangeClosed(int startInclusive, int endInclusive)	시작값에서 끝값(포함)까지 정수 스트림 생성.
+- Arrays.stream(int[] array)	배열을 IntStream으로 변환.
+- IntStream.generate(IntSupplier)	무한 스트림 생성.
+- IntStream.iterate(int seed, IntUnaryOperator)	초기값(seed)에서 시작하여 연속적으로 값을 생성.
 
 
 ### 중간 연산
 
-메서드	설명
-filter(IntPredicate)	조건에 맞는 요소만 포함.
-map(IntUnaryOperator)	요소를 변환.
-distinct()	중복 제거.
-sorted()	요소를 정렬.
-limit(long maxSize)	최대 n개의 요소만 반환.
-skip(long n)	처음 n개의 요소를 건너뜀.
+- filter(IntPredicate)	조건에 맞는 요소만 포함.
+- map(IntUnaryOperator)	요소를 변환.
+- distinct()	중복 제거.
+- sorted()	요소를 정렬.
+- limit(long maxSize)	최대 n개의 요소만 반환.
+- skip(long n)	처음 n개의 요소를 건너뜀.
 
 ### 종료 연산
 
-sum()	요소의 합을 반환.
-average()	요소의 평균을 반환.
-min() / max()	최소값 또는 최대값을 반환.
-count()	요소의 개수를 반환.
-toArray()	스트림의 모든 요소를 배열로 반환.
-forEach(IntConsumer)	각 요소에 대해 작업을 수행.
-reduce(int identity, IntBinaryOperator)	누적 합산이나 다른 집계 작업 수행.
+- sum()	요소의 합을 반환.
+- average()	요소의 평균을 반환.
+- min() / max()	최소값 또는 최대값을 반환.
+- count()	요소의 개수를 반환.
+- toArray()	스트림의 모든 요소를 배열로 반환.
+- forEach(IntConsumer)	각 요소에 대해 작업을 수행.
+- reduce(int identity, IntBinaryOperator)	누적 합산이나 다른 집계 작업 수행.
 
 
 
